@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;1,600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #303031;
+  margin: 0;
+  width: 100%;
+}
+.logo{
+  max-width: 100%;
+  width: 60px;
+  padding-top: 0px;
+  cursor: pointer;
+  margin-left: 0px;
+}
+.mobile-menu-exit{
+  max-width: 100%;
+  width: 20px;
+  padding-top: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+.nav1{
+  background: white;
+  width: 100%;
+  padding: 0%;
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 5.1);
+  display: block;
+  position: fixed;
+}
+
+.x-nav{
+  display: none;
+  z-index: 999;
+}
+
+.x-nav.mobile-menu{
+  display: block;
+  background: #000000ee;
+  width: 100vmax;
+  height: 100vh;
+  float: top;
+  border-radius: 5px;
+  bottom: .1em; 
+}
+
+.x-nav{
+  position: fixed;
+  z-index: 999;
+  right: -1.9em;
+  background: #000000;
+  padding-right: 1.5em;
+}
+.container{
+  margin: 1px 1px 1px 1px;
+  display: flex;
+  place-content: space-between;
+}
+.switflix-logo{
+  margin: 1px 1px 1px 1px;
+  display: flex;
+  place-content: space-between;
+}
+.switflix-name{
+  max-width: 100%;
+  width: 85px;
+  font-style: normal;
+  padding: 20px 0px 10px 5px;
+  cursor: pointer;
+  margin-left: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+.mobile-menu{
+  max-width: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.list{
+  color: rgb(253, 252, 252);
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  font-size: 1em;
+  text-align: right;
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+.mobile-menu-exit{
+  cursor: pointer;
+  margin: .5em;
+}
+
+ul{
+  list-style-type: none;
+}
+
+section{
+  padding: 1.5em;
+}
+
+.the-assessment {
+  width: 95%;
+  max-height: 420px;
+  padding: 40px 50px;
+  text-align: left;
+  background: white;
+  border-radius: 5px;
+  margin: 2%;
+  margin-top: 2.0em;
+  margin-bottom: .5em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  
+  background-image: url(/image/Assessment.png);
+  background-repeat: no-repeat;
+  background-size: 195%;
+  background-position: left 80% top 0px;
+}
+
+.assessment-why{
+  font-weight: 500;
+}
+
+button {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 49.9%;
+  border: none;
+  outline: none; 
+  padding: 10px 20px 10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 1px 1px 1px 1px rgba(122, 122, 122, 0.3);
+  color: #094124;
+  cursor: pointer;
+  transition: 3s ease background-color;
+}
+
+button:hover{
+  background-color: #094124;
+  color: #f9f9f9;
+}
+.popup {
+  display: none;
+  position: fixed;
+  left: 0%;
+  top: 13%;
+  bottom: -01%;
+  width: 100%;
+  background: #0c0c0cea;
+  padding: 3% 0% 3% 8%;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 10;
+}
+
+.popup-white{
+  top: 10%;
+  left: 5px;
+  width: 95%;
+  height: 101%;
+  background: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 20;
+}
+
+.titile_above{
+  margin-bottom: 20px;
+}
+
+.sub-titil{
+  font-weight: 200;
+  font-size: smaller;
+}
+
+.scroll_assessment_container{
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.popup select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+.popup input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+.btu_brack{
+  display: flex;
+}
+
+.closeForm{
+  margin-left: 5px;
+}
+
+.result {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 20px;
+  padding: 15px;
+  font-weight: lighter;
+  background: #f9f9f9;
+  border-left: 5px solid #094124;
+}
+
+.switflix_question{
+  width: 95%;
+  max-height: 500px;
+  padding: 35px;
+  text-align: left;
+  background: white;
+  border-radius: 5px;
+  margin: 2%;
+  margin-top: 4em;
+  margin-bottom: 2.5em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+
+  
+  
+  background-image: url(/image/switflix_food.png);
+  background-repeat: no-repeat;
+  background-size: 293%;
+  background-position: left 70% top -5px;
+}
+
+.Thriveline{
+  width: 95%;
+  max-height: 500px;
+  padding: 40px;
+  text-align: left;
+  background: white;
+  border-radius: 5px;
+  margin: 2%;
+  margin-top: 4em;
+  margin-bottom: 2.5em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: left -310% top -69px;
+}
+
+.class-titile{
+  padding-bottom: 6px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.subtitile{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  font-size: x-small;
+  padding-bottom: 5px;
+
+}
+
+.switflix-profile{
+  padding-bottom: 5px;
+}
+
+.Brand-Story{
+  width: 100%;
+  max-width: 500px;
+  max-height: 300px;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  color: rgb(51, 51, 50);
+  box-shadow: 1px 1px 1px 1px rgba(122, 122, 122, 0.3);
+}
+
+.hi{
+  margin: 10px 0 30px 0px;
+}
+.i{
+  margin: 30px 0 30px 0px;
+}
+.cta1{
+  margin: 15px 0 50px 0px;
+}
+
+.meet1{
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.meet-content{
+  width: 20.5em;
+  height: 20em;
+  color: #0cabfa;
+  background: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  box-shadow: 3px 3px 3px 2px rgba(250, 250, 250, 0.1);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+.close{
+  position: absolute;
+  top: 0;
+  font-size: 25px;
+  right: 14px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color: #04a8fa;
+}
+
+.talk1{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.talk-content{
+  width: 30em;
+  height: 13em;
+  color: #252525;
+  background: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 3px 2px rgba(255, 255, 255, 0.2);
+}
+
+.thank-you{
+  width: 8em;
+  height: 3em;
+}
+.remove{
+  position: absolute;
+  top: 0;
+  font-size: 25px;
+  right: 14px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  color: #04a8fa;
+}
+  .container1{
+    margin-bottom: 25px;
+  }
+
+.join-waitlist{
+  text-decoration: none;
+  background: #f9f9f9;
+  padding: 10px 10.5%;
+  border: none;
+  outline: none; 
+  color: #094124;
+  cursor: pointer;
+  transition: 3s ease background-color;
+  box-shadow: 1px 1px 1px 1px rgba(122, 122, 122, 0.3);
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+}
+
+.join-waitlist:hover{
+  background-color: #094124;
+  color: #f9f9f9;
+}
+
+.vee{
+  font-size: x-small;
+}
+
+.sub_btu_text{
+  margin-top: 9px;
+  color: #094124;
+  font-weight: 200;
+  font-size: xx-small;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.talk{
+  text-decoration: none;
+  background: white;
+  margin: 2em;
+  width: 2em;
+  color: rgb(37, 37, 37);
+  box-shadow: 1px 1px 1px 1px rgba(122, 122, 122, 0.3);
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+}
+
+.evidence{
+  width: 95%;
+  max-height: 500px;
+  padding: 40px;
+  text-align: left;
+  background: white;
+  border-radius: 5px;
+  margin: 2%;
+  margin-top: 4em;
+  margin-bottom: 2.5em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+
+  background-image: url(/image/Coach-Bami-vs-Aduni-Pro-Max.png);
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: left 62% top 0px;
+}
+
+.make_them_pick_us_video{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.coach_bami_vs_aduni_pro_max{
+  font-weight: 300;
+  font-size: x-small;
+}
+
+.view_more{
+  text-decoration: none;
+  background: #f9f9f9;
+  padding: 10px 10.5%;
+  border: none;
+  outline: none; 
+  color: #094124;
+  cursor: pointer;
+  transition: 3s ease background-color;
+  box-shadow: 1px 1px 1px 1px rgba(122, 122, 122, 0.3);
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+}
+
+.view_more:hover{
+  background: #094124;
+  color: #f9f9f9;
+}
+
+.circle{
+  width: 95%;
+  max-height: 450px;
+  padding: 40px;
+  text-align: left;
+  background: white;
+  border-radius: 5px;
+  margin: 2%;
+  margin-top: 4.0em;
+  margin-bottom: 2.5em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: left -310% top -69px;
+}
+
+.aduni{
+  margin-top: 20px;
+  margin-left: 15%;
+  font-weight: 300;
+  font-size: x-small;
+}
+
+.circle-info{
+  font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.the_switflix_circle{
+  margin-bottom: 30px;
+}
+.circle-btu{
+  text-decoration: none;
+  background: #f9f9f9;
+  padding: 10px 15%;
+  max-width: 13%;
+  min-width: 33%;
+  border: none;
+  outline: none; 
+  color: #094124;
+  cursor: pointer;
+  transition: 3s ease background-color;
+  box-shadow: 1px 1px 1px 1px rgba(122, 122, 122, 0.3);
+  border-radius: 5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+}
+
+
+.circle-btu:hover{
+  background: #094124;
+  color: #f9f9f9;
+}
+
+.Powered{
+  width: 100%;
+  background: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+}
+
+.powerd-by{
+  align-items: center;
+}
+
+
+@media screen and (min-width: 375px) {
+  .note{
+    display: grid;
+  }
+  .hero{
+    margin-top: 4.0em;
+    margin-bottom: 4.5em;
+  }
+  .container1{
+    margin-bottom: 25px;
+    display: flex;
+  }
+  .cta1{
+    margin-left: 20px;
+    margin-top: 130px;
+  }
+  .socialx .slack{
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+
+
+.the-assessment {
+  background-image: url(/image/Assessment.png);
+  background-repeat: no-repeat;
+  background-size: 217%;
+  background-position: left 70% top 0px;
+}
+
+.Thriveline{
+  padding: 25px;
+
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 217%;
+  background-position: left 70% top 0px;
+}
+
+.evidence{
+  padding: 25px;
+
+  background-image: url(/image/Coach-Bami-vs-Aduni-Pro-Max.png);
+  background-repeat: no-repeat;
+  background-size: 168%;
+  background-position: left 67% top 0px;
+}
+
+.circle{
+  padding: 25px; 
+
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: left 990% top 50px;
+}
+
+}
+
+
+
+@media screen and (min-width: 424px) {
+  .note{
+    display: grid;
+  }
+  .hero{
+    margin-top: 4.0em;
+    margin-bottom: 4.5em;
+  }
+  .container1{
+    margin-bottom: 25px;
+    display: flex;
+  }
+  .cta1{
+    margin-left: 20px;
+    margin-top: 130px;
+  }
+  .socialx .slack{
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+
+
+.the-assessment {
+  background-image: url(/image/Assessment.png);
+  background-repeat: no-repeat;
+  background-size: 194%;
+  background-position: left 78% top 0px;
+}
+  .evidence{
+  background-image: url(/image/Coach-Bami-vs-Aduni-Pro-Max.png);
+  background-repeat: no-repeat;
+  background-size: 178%;
+  background-position: left 67% top 0px;
+}
+ .circle{ 
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: left 990% top 50px;
+}
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .note{
+    display: grid;
+  }
+  .hero{
+    margin-top: 4.0em;
+    margin-bottom: 4.5em;
+  }
+  .container1{
+    margin-bottom: 25px;
+    display: flex;
+  }
+  .cta1{
+    margin-left: 20px;
+    margin-top: 130px;
+  }
+  .socialx .slack{
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+
+
+.the-assessment {
+  background-image: url(/image/Assessment.png);
+  background-repeat: no-repeat;
+  background-size: 102.5%;
+  background-position: left 90% top 0px;
+}
+
+.Thriveline{
+
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 97%;
+  background-position: left 920% top -50px;
+}
+  .evidence{
+  background-image: url(/image/Coach-Bami-vs-Aduni-Pro-Max.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: left 60% top 0px;
+}
+ .circle{ 
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: left 145% top -94px;
+}
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  .note{
+    display: grid;
+  }
+  .hero{
+    margin-top: 4.0em;
+    margin-bottom: 4.5em;
+  }
+  .cta1{
+    margin-left: 300px;
+    margin-top: 130px;
+  }
+  .container1{
+    margin-bottom: 25px;
+    display: flex;
+  }
+  .socialx .slack{
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+  
+.the-assessment {
+  background-image: url(/image/Assessment.png);
+  background-repeat: no-repeat;
+  background-size: 77%;
+  background-position: left 99.9% top 0px;
+}
+  .evidence{
+  background-image: url(/image/Coach-Bami-vs-Aduni-Pro-Max.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: left 60% top 0px;
+}
+ .circle{ 
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 18%;
+  background-position: left 103% top -25px;
+}
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  .note{
+    display: grid;
+  }
+  .hero{
+    margin-top: 4.0em;
+    margin-bottom: 2.5em;
+  }
+  .container1{
+    margin-bottom: 25px;
+    display: flex;
+  }
+  .contener{
+    display: flex;
+  }
+  .socialx .slack{
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+  
+.the-assessment {
+  background-image: url(/image/Assessment.png);
+  background-repeat: no-repeat;
+  background-size: 76%;
+  background-position: left 99.9999% top 0px;
+}
+
+.Thriveline{
+
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 67%;
+  background-position: left 190% top -51px;
+}
+  .evidence{
+  background-image: url(/image/Coach-Bami-vs-Aduni-Pro-Max.png);
+  background-repeat: no-repeat;
+  background-size: 62%;
+  background-position: left 100% top 0px;
+}
+ .circle{ 
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 39%;
+  background-position: left 119% top -35px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+  
+.the-assessment {
+  background-image: url(/image/Assessment.png);
+  background-repeat: no-repeat;
+  background-size: 54%;
+  background-position: left 99.9999% top 0px;
+}
+  .evidence{
+  background-image: url(/image/Coach-Bami-vs-Aduni-Pro-Max.png);
+  background-repeat: no-repeat;
+  background-size: 41%;
+  background-position: left 100% top 0px;
+}
+ .circle{ 
+  background-image: url(/image/TheCircle.png);
+  background-repeat: no-repeat;
+  background-size: 39%;
+  background-position: left 119% top -35px;
+}
+
+}
