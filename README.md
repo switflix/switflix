@@ -24,4 +24,4 @@ feedback
 ## 📦 Installation & Setup
 1. Clone the repo:
    ```bash
-   git clone https://switflix.github.com/switflix.git
+   git clone https://github.com/switflix.git
